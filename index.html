@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saat ve Kronometre</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://fonts.gstatic.com/s/i/materialicons/schedule/v12/24px.svg">
+</head>
+<body>
+    <div class="container">
+        <div class="section clock-section active" id="clockSection">
+            <div id="date" class="date-display"></div>
+            <div id="clock" class="display clock-display"></div>
+        </div>
+
+        <div class="section stopwatch-section" id="stopwatchSection">
+            <div id="stopwatch" class="display clock-display">00:00:00</div>
+            <div class="buttons">
+                <button id="startStopwatch">Başlat</button>
+                <button id="stopStopwatch">Durdur</button>
+                <button id="resetStopwatch">Sıfırla</button>
+            </div>
+        </div>
+
+        <div class="section timer-section" id="timerSection">
+            <div class="timer-container">
+                <div class="timer-box">
+                    <span>Saat</span>
+                    <div class="time-input">
+                        <input type="number" id="hours" min="0" max="23" value="0">
+                    </div>
+                </div>
+                
+                <div class="timer-box">
+                    <span>Dakika</span>
+                    <div class="time-input">
+                        <input type="number" id="minutes" min="0" max="59" value="0">
+                    </div>
+                </div>
+                
+                <div class="timer-box">
+                    <span>Saniye</span>
+                    <div class="time-input">
+                        <input type="number" id="seconds" min="0" max="59" value="0">
+                    </div>
+                </div>
+            </div>
+            <div id="timer" class="display clock-display">00:00:00</div>
+            <div class="buttons">
+                <button id="startTimer">Başlat</button>
+                <button id="stopTimer">Durdur</button>
+                <button id="resetTimer">Sıfırla</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="nav-buttons">
+        <button class="nav-btn active" data-target="clock"><span class="material-icons">schedule</span></button>
+        <button class="nav-btn" data-target="stopwatch"><span class="material-icons">hourglass_top</span></button>
+        <button class="nav-btn" data-target="timer"><span class="material-icons">timer</span></button>
+    </div>
+
+    <div class="signature">Created by Emirhan Berber for Polinom Kurs Fatih</div>
+    <script src="script.js"></script>
+
+    <!-- Alarm sesi için audio elementi -->
+    <audio id="alarmSound" src="https://assets.mixkit.co/active_storage/sfx/2869/2869-preview.mp3"></audio>
+
+    <!-- Süre dolunca gösterilecek modal -->
+    <div id="timerModal" class="modal">
+        <div class="modal-content">
+            <h2>Süre Doldu!</h2>
+            <button onclick="closeModal()">Tamam</button>
+        </div>
+    </div>
+</body>
+</html> 
