@@ -11,11 +11,51 @@
 <body>
     <div class="container">
         <div class="section clock-section active" id="clockSection">
+            <div class="analog-clock">
+                <div class="clock-face">
+                    <div class="number number-12"><span>12</span></div>
+                    <div class="number number-1"><span>1</span></div>
+                    <div class="number number-2"><span>2</span></div>
+                    <div class="number number-3"><span>3</span></div>
+                    <div class="number number-4"><span>4</span></div>
+                    <div class="number number-5"><span>5</span></div>
+                    <div class="number number-6"><span>6</span></div>
+                    <div class="number number-7"><span>7</span></div>
+                    <div class="number number-8"><span>8</span></div>
+                    <div class="number number-9"><span>9</span></div>
+                    <div class="number number-10"><span>10</span></div>
+                    <div class="number number-11"><span>11</span></div>
+                    <div class="hand hour-hand"></div>
+                    <div class="hand minute-hand"></div>
+                    <div class="hand second-hand"></div>
+                    <div class="center-dot"></div>
+                </div>
+            </div>
             <div id="date" class="date-display"></div>
             <div id="clock" class="display clock-display"></div>
         </div>
 
         <div class="section stopwatch-section" id="stopwatchSection">
+            <div class="analog-clock">
+                <div class="clock-face">
+                    <div class="number number-12"><span>12</span></div>
+                    <div class="number number-1"><span>1</span></div>
+                    <div class="number number-2"><span>2</span></div>
+                    <div class="number number-3"><span>3</span></div>
+                    <div class="number number-4"><span>4</span></div>
+                    <div class="number number-5"><span>5</span></div>
+                    <div class="number number-6"><span>6</span></div>
+                    <div class="number number-7"><span>7</span></div>
+                    <div class="number number-8"><span>8</span></div>
+                    <div class="number number-9"><span>9</span></div>
+                    <div class="number number-10"><span>10</span></div>
+                    <div class="number number-11"><span>11</span></div>
+                    <div class="hand hour-hand"></div>
+                    <div class="hand minute-hand"></div>
+                    <div class="hand second-hand"></div>
+                    <div class="center-dot"></div>
+                </div>
+            </div>
             <div id="stopwatch" class="display clock-display">00:00:00</div>
             <div class="buttons">
                 <button id="startStopwatch">Başlat</button>
@@ -56,13 +96,40 @@
         </div>
     </div>
 
+    <div class="analog-clock">
+        <div class="clock-face">
+            <div class="number number-12"><span>12</span></div>
+            <div class="number number-1"><span>1</span></div>
+            <div class="number number-2"><span>2</span></div>
+            <div class="number number-3"><span>3</span></div>
+            <div class="number number-4"><span>4</span></div>
+            <div class="number number-5"><span>5</span></div>
+            <div class="number number-6"><span>6</span></div>
+            <div class="number number-7"><span>7</span></div>
+            <div class="number number-8"><span>8</span></div>
+            <div class="number number-9"><span>9</span></div>
+            <div class="number number-10"><span>10</span></div>
+            <div class="number number-11"><span>11</span></div>
+            <div class="hand hour-hand"></div>
+            <div class="hand minute-hand"></div>
+            <div class="hand second-hand"></div>
+            <div class="center-dot"></div>
+        </div>
+    </div>
+
     <div class="nav-buttons">
         <button class="nav-btn active" data-target="clock"><span class="material-icons">schedule</span></button>
         <button class="nav-btn" data-target="stopwatch"><span class="material-icons">hourglass_top</span></button>
         <button class="nav-btn" data-target="timer"><span class="material-icons">timer</span></button>
     </div>
 
-    <div class="signature">Created by Emirhan Berber for Polinom Kurs Fatih</div>
+    <div class="signature">
+        <p>Created by Emirhan Berber for Polinom Kurs Fatih</p>
+        <div class="contact-info">
+            <p>Sayfanın güncel tutulmasını önemsiyoruz. Görüş, öneri ve şikayetleriniz için <span>Kurum öğretmenlerinize belirtebilir veya aşağıdaki adresten benimle</span> iletişime geçebilirsiniz.</p>
+            <p class="website">emirhanberber.net</p>
+        </div>
+    </div>
     <script src="script.js"></script>
 
     <!-- Alarm sesi için audio elementi -->

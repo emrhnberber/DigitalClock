@@ -19,24 +19,35 @@ navButtons.forEach(button => {
     });
 });
 
+// İstanbul saatini al
+function getIstanbulTime() {
+    const now = new Date();
+    const istanbulOffset = 3; // UTC+3 (İstanbul)
+    const localOffset = -now.getTimezoneOffset() / 60;
+    const offsetDiff = istanbulOffset - localOffset;
+    
+    // Saat farkını ekleyerek İstanbul saatini hesapla
+    return new Date(now.getTime() + offsetDiff * 60 * 60 * 1000);
+}
+
 // Saat ve tarih fonksiyonları
 function updateClock() {
-    const now = new Date();
+    const istanbulTime = getIstanbulTime();
     
     // Saat güncelleme
-    const hours = String(now.getHours()).padStart(2, '0');
-    const minutes = String(now.getMinutes()).padStart(2, '0');
-    const seconds = String(now.getSeconds()).padStart(2, '0');
+    const hours = String(istanbulTime.getHours()).padStart(2, '0');
+    const minutes = String(istanbulTime.getMinutes()).padStart(2, '0');
+    const seconds = String(istanbulTime.getSeconds()).padStart(2, '0');
     document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
     
     // Tarih güncelleme
     const days = ['Pazar', 'Pazartesi', 'Salı', 'Çarşamba', 'Perşembe', 'Cuma', 'Cumartesi'];
     const months = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'];
     
-    const day = days[now.getDay()];
-    const date = now.getDate();
-    const month = months[now.getMonth()];
-    const year = now.getFullYear();
+    const day = days[istanbulTime.getDay()];
+    const date = istanbulTime.getDate();
+    const month = months[istanbulTime.getMonth()];
+    const year = istanbulTime.getFullYear();
     
     document.getElementById('date').textContent = `${day}, ${date} ${month} ${year}`;
 }
@@ -169,4 +180,42 @@ document.getElementById('resetStopwatch').addEventListener('click', resetStopwat
 
 document.getElementById('startTimer').addEventListener('click', startTimer);
 document.getElementById('stopTimer').addEventListener('click', stopTimer);
-document.getElementById('resetTimer').addEventListener('click', resetTimer); 
+document.getElementById('resetTimer').addEventListener('click', resetTimer);
+
+// Analog saat fonksiyonu
+function updateAnalogClock() {
+    const istanbulTime = getIstanbulTime();
+    const seconds = istanbulTime.getSeconds();
+    const minutes = istanbulTime.getMinutes();
+    const hours = istanbulTime.getHours();
+
+    // Tüm analog saatleri güncelle
+    document.querySelectorAll('.analog-clock').forEach(clock => {
+        const secondHand = clock.querySelector('.second-hand');
+        const minuteHand = clock.querySelector('.minute-hand');
+        const hourHand = clock.querySelector('.hour-hand');
+
+        // Saniye ibresi: Her saniye 6 derece (360/60)
+        const secondDegrees = (seconds * 6);
+        
+        // Dakika ibresi: Her dakika 6 derece + saniyenin katkısı
+        const minuteDegrees = (minutes * 6) + (seconds * 0.1);
+        
+        // Saat ibresi: Her saat 30 derece (360/12) + dakikanın katkısı
+        const hourDegrees = ((hours % 12) * 30) + (minutes * 0.5);
+
+        secondHand.style.transform = `rotate(${secondDegrees}deg)`;
+        minuteHand.style.transform = `rotate(${minuteDegrees}deg)`;
+        hourHand.style.transform = `rotate(${hourDegrees}deg)`;
+    });
+}
+
+// Her saniye saati güncelle
+setInterval(() => {
+    updateClock();
+    updateAnalogClock();
+}, 1000);
+
+// İlk yükleme için çağır
+updateClock();
+updateAnalogClock(); 
