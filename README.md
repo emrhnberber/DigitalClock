@@ -1,15 +1,30 @@
-# Saat ve Kronometre Uygulaması
+# ⏰ Reklamsız Online Saat
+Bu proje, Yükseköğretim Kurumları Sınavı (YKS) hazırlık sürecinde, eğitim kurumlarında gerçekleştirilen deneme sınavları sırasında kullanılan online saat sitelerindeki gereksiz reklamlar ve dikkat dağıtıcı unsurların oluşturduğu sorunlara çözüm olması amacıyla kullanılarak geliştirilmiştir.
 
-Bu proje, **Emirhan Berber** tarafından **Polinom Kurs** için **Cursor AI** kullanılarak geliştirilmiştir. Projenin temel amacı, internette reklamsız bir kronometre ihtiyacını karşılamaktır. Kullanıcılar, minimalist ve kullanıcı dostu bir tasarıma sahip olan bu uygulamayı doğrudan çevrimiçi olarak kullanabilirler.
+🎯 **Amaç**  
+Bu proje, YKS hazırlık sürecinde girdiğim deneme sınavlarında kullanılan saat sitelerindeki:  
+- 🚫 Gereksiz reklamlar,  
+- ⚠️ Dikkat dağıtıcı öğeler sorununa çözüm olarak geliştirildi.  
 
-## Özellikler
+## 🛠️ Kullanılan Teknolojiler  
+- 🌐 **HTML5**: Temel yapıyı oluşturmak için.  
+- 🎨 **CSS3**: Minimalist ve sade tasarım için.  
+- 💻 **JavaScript**: Dinamik saat işlevselliği.  
+- 📱 **Responsive Tasarım**: Mobil ve masaüstü cihazlarda kusursuz görünüm.  
 
-- **Reklamsız Kullanım**: Hiçbir reklam olmadan sade bir deneyim sunar.
-- **Kronometre Fonksiyonu**: Basit, işlevsel ve kullanımı kolay bir kronometre.
-- **Güncel Saat ve Tarih Gösterimi**: Kullanıcının cihazına göre doğru zaman bilgilerini görüntüler.
-- **Minimalist Tasarım**: Gereksiz karmaşıklıklardan uzak, modern bir arayüz.
+## ✨ Özellikler  
+- 🔍 **Reklamsız ve Temiz Arayüz**: Sadece saate odaklanmanız için tasarlandı.  
+- 💡 **Minimalist Tasarım**: Dikkatinizi dağıtmayan sade bir görünüm.  
+- 📱 **Mobil Uyumlu**: Hem telefon hem bilgisayarlar için optimize edildi.  
 
-## Kullanım
+---
 
-Bu uygulamayı hiçbir kurulum yapmadan şu adresten kullanabilirsiniz:  
-➡️ [emirhanberber.net/saat](https://emirhanberber.net/saat)
+## 🚀 Projeyi Canlı İzleme
+Projeyi emirhanberber.net adresini ziyaret ederek görüntüleyebilirsin!
+
+---
+
+## 📸 Ekran Görüntüleri
+![Saat Ekranı Görseli](screenshot/saat.png)
+![Saat Ekranı Görseli](screenshot/kronometre.png)
+![Saat Ekranı Görseli](screenshot/gerisayim.png)
