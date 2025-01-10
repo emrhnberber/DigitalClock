@@ -25,6 +25,10 @@ Projeyi emirhanberber.net adresini ziyaret ederek görüntüleyebilirsin!
 ---
 
 ## 📸 Ekran Görüntüleri
+---
+### ⏰ Saat Ekranı Görseli
 ![Saat Ekranı Görseli](screenshot/saat.png)
-![Saat Ekranı Görseli](screenshot/kronometre.png)
-![Saat Ekranı Görseli](screenshot/gerisayim.png)
+### ⏰ Kronometre Ekranı Görseli
+![Kronometre Ekranı Görseli](screenshot/kronometre.png)
+### ⏰ Geri Sayım Ekranı Görseli
+![Geri Sayım Ekranı Görseli](screenshot/gerisayim.png)
