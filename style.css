@@ -18,16 +18,16 @@ body {
 
 .container {
     background-color: #1e1e1e;
-    padding: 4rem;
+    padding: 2rem;
     border-radius: 30px;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
-    width: 98%;
-    max-width: 1400px;
-    min-height: 65vh;
+    width: 90%;
+    max-width: 1000px;
+    min-height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 1rem;
+    margin: 1rem auto;
 }
 
 .section {
@@ -196,14 +196,16 @@ body {
 }
 
 .clock-display {
-    font-size: 12rem;
+    font-size: 6rem;
     margin: 1rem 0;
     text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-    letter-spacing: -5px;
+    letter-spacing: -2px;
+    font-family: monospace;
+    line-height: 1;
 }
 
 .date-display {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     color: #666;
     text-align: center;
     margin: 1rem 0;
@@ -405,29 +407,52 @@ button:active {
     position: relative;
 }
 
-/* Tablet için medya sorguları (768px - 1024px) */
+/* Tablet için medya sorguları */
 @media screen and (max-width: 1024px) {
     .container {
-        padding: 2rem;
+        padding: 1.5rem;
+        width: 98%;
         min-height: 50vh;
     }
 
     .clock-display {
-        font-size: 8rem;
-        letter-spacing: -3px;
+        font-size: 6rem;
     }
 
     .date-display {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
-    .timer-container {
-        gap: 15px;
-        padding: 15px;
+    .buttons {
+        gap: 10px;
+        margin: 1rem auto;
     }
 
-    .timer-box {
-        padding: 12px 20px;
+    button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
+
+/* Mobil için medya sorguları */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 1rem 0;
+    }
+
+    .container {
+        padding: 1rem;
+        min-height: auto;
+        border-radius: 20px;
+    }
+
+    .clock-display {
+        font-size: 4rem;
+        letter-spacing: -1px;
+    }
+
+    .date-display {
+        font-size: 1.5rem;
     }
 
     .buttons {
@@ -435,98 +460,29 @@ button:active {
     }
 
     button {
-        padding: 8px 20px;
+        padding: 8px 16px;
         font-size: 0.9rem;
-        min-width: 100px;
-    }
-
-    .nav-btn {
-        width: 44px;
-        height: 44px;
-    }
-}
-
-/* Mobil için medya sorguları (768px'den küçük) */
-@media screen and (max-width: 768px) {
-    .container {
-        padding: 1.5rem;
-        width: 95%;
-        min-height: 40vh;
-        border-radius: 20px;
-    }
-
-    .clock-display {
-        font-size: 4rem;
-        letter-spacing: -2px;
-        margin: 0.5rem 0;
-    }
-
-    .date-display {
-        font-size: 1.5rem;
-    }
-
-    .timer-container {
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 10px;
-        padding: 10px;
-        justify-content: center;
-    }
-
-    .timer-box {
-        width: auto;
-        min-width: 100px;
-    }
-
-    .buttons {
-        flex-direction: row;
-        gap: 6px;
-        width: 100%;
-        max-width: 300px;
-        margin: 1rem auto;
-    }
-
-    button {
-        width: auto;
-        min-width: 80px;
-        padding: 8px 12px;
-        font-size: 0.85rem;
-        border-radius: 15px;
+        min-width: 90px;
     }
 
     .nav-buttons {
         gap: 1rem;
-        padding: 10px 20px;
     }
 
     .nav-btn {
         width: 40px;
         height: 40px;
-        border-radius: 50%;
-    }
-
-    .nav-btn .material-icons {
-        font-size: 20px;
-    }
-
-    .signature {
-        font-size: 0.8rem;
-    }
-
-    /* Modal düzenlemeleri */
-    .modal-content {
-        width: 90%;
-        max-width: 300px;
-        padding: 20px;
-    }
-
-    .modal-content h2 {
-        font-size: 1.5rem;
     }
 }
 
-/* Çok küçük ekranlar için ek düzenlemeler (400px'den küçük) */
-@media screen and (max-width: 400px) {
+/* Küçük ekranlar için medya sorguları */
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 1rem;
+        width: 95%;
+        min-height: auto;
+    }
+
     .clock-display {
         font-size: 3rem;
     }
@@ -535,47 +491,88 @@ button:active {
         font-size: 1.2rem;
     }
 
+    button {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+        min-width: 80px;
+    }
+}
+
+/* Tablet ve küçük laptop */
+@media screen and (min-width: 481px) and (max-width: 1024px) {
     .container {
-        padding: 1rem;
+        padding: 1.5rem;
+        width: 90%;
+        min-height: 45vh;
     }
 
-    .timer-box {
-        padding: 10px 15px;
+    .clock-display {
+        font-size: 5rem;
     }
 
-    .time-input input {
-        font-size: 20px;
+    .date-display {
+        font-size: 1.6rem;
+    }
+}
+
+/* Normal masaüstü ekranlar */
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+    .container {
+        padding: 2rem;
+        width: 85%;
+        max-width: 1100px;
     }
 
-    .nav-buttons {
-        gap: 0.8rem;
-        padding: 8px 16px;
+    .clock-display {
+        font-size: 6rem;
     }
 
-    .nav-btn {
-        width: 36px;
-        height: 36px;
+    .date-display {
+        font-size: 1.8rem;
+    }
+}
+
+/* Büyük ekranlar (1440p) */
+@media screen and (min-width: 1441px) and (max-width: 2559px) {
+    .container {
+        padding: 2.5rem;
+        max-width: 1300px;
+        min-height: 55vh;
     }
 
-    .nav-btn .material-icons {
-        font-size: 18px;
+    .clock-display {
+        font-size: 7rem;
     }
 
-    .buttons {
-        gap: 4px;
-        max-width: 280px;
+    .date-display {
+        font-size: 2rem;
     }
 
     button {
-        min-width: 70px;
-        padding: 6px 10px;
-        font-size: 0.8rem;
-        border-radius: 12px;
+        padding: 15px 30px;
+        font-size: 1.2rem;
+    }
+}
+
+/* Çok büyük ekranlar (4K ve üzeri) */
+@media screen and (min-width: 2560px) {
+    .container {
+        padding: 3rem;
+        max-width: 1600px;
+        min-height: 60vh;
     }
 
-    .timer-container {
-        gap: 8px;
-        padding: 8px;
+    .clock-display {
+        font-size: 8rem;
+    }
+
+    .date-display {
+        font-size: 2.2rem;
+    }
+
+    button {
+        padding: 20px 40px;
+        font-size: 1.4rem;
     }
 }
 
@@ -587,20 +584,13 @@ button:active {
     }
 
     .clock-display {
-        font-size: 4rem;
+        font-size: 3rem;
         margin: 0.5rem 0;
     }
 
-    .timer-container {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    button {
-        min-width: 80px;
-        padding: 6px 12px;
-        font-size: 0.85rem;
+    .date-display {
+        font-size: 1.2rem;
+        margin: 0.3rem 0;
     }
 }
 
